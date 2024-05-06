@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { IonContent, IonPage } from '@ionic/react';
 import CreateAccountHeader from '../../components/GradientHeader/CreateAccountHeader'; 
 import { useHistory } from 'react-router-dom';
+import { ApiService } from '../../../services/api.service';
 import '../../components/AccountQuestion.css';
 
 interface AccountQuestion1Props {
   onNextClick: () => void; // Define only the method type here
 }
+
 
 const AccountQuestion1: React.FC<AccountQuestion1Props> = ({
 }) => {
@@ -16,8 +18,19 @@ const AccountQuestion1: React.FC<AccountQuestion1Props> = ({
   const onBackClick = () => {
     history.push('/home'); // Navigation function
   }
-  const onNextClick = () => {
-    history.push('/account-question-2');
+
+  
+  const onNextClick = async () => {
+    // Use ApiService to send 'answer' to your backend
+    console.log("testing")
+    try {
+      
+      const response = await ApiService.createAffiliate(answer); // Assuming 'saveName' is a method in your ApiService
+      console.log('Name saved:', response.data);
+      history.push('/account-question-2');
+    } catch (error) {
+      console.error('Failed to save name:', error);
+    }
   };
 
   return (
@@ -43,7 +56,7 @@ const AccountQuestion1: React.FC<AccountQuestion1Props> = ({
               onClick={onNextClick} 
               className="next-button"
               disabled={!answer} // Disable button if answer is empty
-            >
+            > 
               NEXT
             </button>
           </div>
