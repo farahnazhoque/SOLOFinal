@@ -27,7 +27,7 @@ app.use('/performance', performanceRouter);
 app.use('/workout-type', workoutTypeRouter);
 app.use('/workout', workoutRouter);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3306;
 app.listen(PORT, 'localhost', () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

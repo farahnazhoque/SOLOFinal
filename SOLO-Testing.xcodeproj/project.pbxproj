@@ -10,6 +10,20 @@
 		2FB6C6722BE07C0100128093 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6C6712BE07C0100128093 /* Athlete.swift */; };
 		2FB6C6752BE07CD900128093 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6C6742BE07CD900128093 /* NetworkService.swift */; };
 		2FB6C6772BE07D0700128093 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6C6762BE07D0700128093 /* APIError.swift */; };
+		7F60258E2BE2F5DE00500560 /* pre-commit in Resources */ = {isa = PBXBuildFile; fileRef = 7F60257C2BE2F5DE00500560 /* pre-commit */; };
+		7F60258F2BE2F5DE00500560 /* affiliation.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F60257E2BE2F5DE00500560 /* affiliation.js */; };
+		7F6025902BE2F5DE00500560 /* athlete.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F60257F2BE2F5DE00500560 /* athlete.js */; };
+		7F6025912BE2F5DE00500560 /* coach.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F6025802BE2F5DE00500560 /* coach.js */; };
+		7F6025922BE2F5DE00500560 /* media.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F6025812BE2F5DE00500560 /* media.js */; };
+		7F6025932BE2F5DE00500560 /* performance.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F6025822BE2F5DE00500560 /* performance.js */; };
+		7F6025942BE2F5DE00500560 /* workout_type.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F6025832BE2F5DE00500560 /* workout_type.js */; };
+		7F6025952BE2F5DE00500560 /* workout.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F6025842BE2F5DE00500560 /* workout.js */; };
+		7F6025962BE2F5DE00500560 /* db.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F6025862BE2F5DE00500560 /* db.js */; };
+		7F6025972BE2F5DE00500560 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7F6025882BE2F5DE00500560 /* .gitignore */; };
+		7F6025982BE2F5DE00500560 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F6025892BE2F5DE00500560 /* app.js */; };
+		7F6025992BE2F5DE00500560 /* package-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F60258A2BE2F5DE00500560 /* package-lock.json */; };
+		7F60259A2BE2F5DE00500560 /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F60258B2BE2F5DE00500560 /* package.json */; };
+		7F60259B2BE2F5DE00500560 /* Requests.js in Resources */ = {isa = PBXBuildFile; fileRef = 7F60258D2BE2F5DE00500560 /* Requests.js */; };
 		DCA329712B7B5ED1006AA611 /* SOLO_TestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA329702B7B5ED1006AA611 /* SOLO_TestingApp.swift */; };
 		DCA329732B7B5ED1006AA611 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA329722B7B5ED1006AA611 /* ContentView.swift */; };
 		DCA329752B7B5ED5006AA611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA329742B7B5ED5006AA611 /* Assets.xcassets */; };
@@ -65,6 +79,20 @@
 		2FB6C6712BE07C0100128093 /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		2FB6C6742BE07CD900128093 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2FB6C6762BE07D0700128093 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		7F60257C2BE2F5DE00500560 /* pre-commit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-commit"; sourceTree = "<group>"; };
+		7F60257E2BE2F5DE00500560 /* affiliation.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = affiliation.js; sourceTree = "<group>"; };
+		7F60257F2BE2F5DE00500560 /* athlete.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = athlete.js; sourceTree = "<group>"; };
+		7F6025802BE2F5DE00500560 /* coach.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = coach.js; sourceTree = "<group>"; };
+		7F6025812BE2F5DE00500560 /* media.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = media.js; sourceTree = "<group>"; };
+		7F6025822BE2F5DE00500560 /* performance.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = performance.js; sourceTree = "<group>"; };
+		7F6025832BE2F5DE00500560 /* workout_type.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = workout_type.js; sourceTree = "<group>"; };
+		7F6025842BE2F5DE00500560 /* workout.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = workout.js; sourceTree = "<group>"; };
+		7F6025862BE2F5DE00500560 /* db.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = db.js; sourceTree = "<group>"; };
+		7F6025882BE2F5DE00500560 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7F6025892BE2F5DE00500560 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		7F60258A2BE2F5DE00500560 /* package-lock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
+		7F60258B2BE2F5DE00500560 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		7F60258D2BE2F5DE00500560 /* Requests.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Requests.js; sourceTree = "<group>"; };
 		DCA3296D2B7B5ED1006AA611 /* SOLO-Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOLO-Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA329702B7B5ED1006AA611 /* SOLO_TestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOLO_TestingApp.swift; sourceTree = "<group>"; };
 		DCA329722B7B5ED1006AA611 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,9 +173,55 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		7F60257D2BE2F5DE00500560 /* .husky */ = {
+			isa = PBXGroup;
+			children = (
+				7F60257C2BE2F5DE00500560 /* pre-commit */,
+			);
+			path = .husky;
+			sourceTree = "<group>";
+		};
+		7F6025852BE2F5DE00500560 /* routes */ = {
+			isa = PBXGroup;
+			children = (
+				7F60257E2BE2F5DE00500560 /* affiliation.js */,
+				7F60257F2BE2F5DE00500560 /* athlete.js */,
+				7F6025802BE2F5DE00500560 /* coach.js */,
+				7F6025812BE2F5DE00500560 /* media.js */,
+				7F6025822BE2F5DE00500560 /* performance.js */,
+				7F6025832BE2F5DE00500560 /* workout_type.js */,
+				7F6025842BE2F5DE00500560 /* workout.js */,
+			);
+			path = routes;
+			sourceTree = "<group>";
+		};
+		7F6025872BE2F5DE00500560 /* server */ = {
+			isa = PBXGroup;
+			children = (
+				7F6025862BE2F5DE00500560 /* db.js */,
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		7F60258C2BE2F5DE00500560 /* SOLO-backend */ = {
+			isa = PBXGroup;
+			children = (
+				7F60257D2BE2F5DE00500560 /* .husky */,
+				7F6025852BE2F5DE00500560 /* routes */,
+				7F6025872BE2F5DE00500560 /* server */,
+				7F6025882BE2F5DE00500560 /* .gitignore */,
+				7F6025892BE2F5DE00500560 /* app.js */,
+				7F60258A2BE2F5DE00500560 /* package-lock.json */,
+				7F60258B2BE2F5DE00500560 /* package.json */,
+			);
+			path = "SOLO-backend";
+			sourceTree = "<group>";
+		};
 		DCA329642B7B5ED1006AA611 = {
 			isa = PBXGroup;
 			children = (
+				7F60258D2BE2F5DE00500560 /* Requests.js */,
+				7F60258C2BE2F5DE00500560 /* SOLO-backend */,
 				DCA3296F2B7B5ED1006AA611 /* SOLO-Testing */,
 				DCA329802B7B5ED6006AA611 /* SOLO-TestingTests */,
 				DCA3298A2B7B5ED6006AA611 /* SOLO-TestingUITests */,
@@ -349,23 +423,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F60258E2BE2F5DE00500560 /* pre-commit in Resources */,
 				DCD252682B7D7FB80045D5E2 /* Poppins-SemiBold.ttf in Resources */,
+				7F6025922BE2F5DE00500560 /* media.js in Resources */,
 				DCD2526A2B7D7FB80045D5E2 /* Poppins-Light.ttf in Resources */,
 				DCD2525C2B7D7FB80045D5E2 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				DCD2525D2B7D7FB80045D5E2 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				7F6025942BE2F5DE00500560 /* workout_type.js in Resources */,
 				DCD252602B7D7FB80045D5E2 /* Poppins-BoldItalic.ttf in Resources */,
 				DCD252652B7D7FB80045D5E2 /* Poppins-Regular.ttf in Resources */,
 				DCD2526C2B7D7FB80045D5E2 /* Poppins-Bold.ttf in Resources */,
+				7F6025972BE2F5DE00500560 /* .gitignore in Resources */,
 				DCD2526B2B7D7FB80045D5E2 /* Poppins-Black.ttf in Resources */,
 				DCA329782B7B5ED5006AA611 /* Preview Assets.xcassets in Resources */,
+				7F6025982BE2F5DE00500560 /* app.js in Resources */,
+				7F60259A2BE2F5DE00500560 /* package.json in Resources */,
+				7F6025932BE2F5DE00500560 /* performance.js in Resources */,
 				DCD2526D2B7D7FB80045D5E2 /* Poppins-Thin.ttf in Resources */,
 				DCD252672B7D7FB80045D5E2 /* Poppins-MediumItalic.ttf in Resources */,
 				DCA329752B7B5ED5006AA611 /* Assets.xcassets in Resources */,
 				DCD2525F2B7D7FB80045D5E2 /* Poppins-BlackItalic.ttf in Resources */,
 				DCD252622B7D7FB80045D5E2 /* Poppins-ThinItalic.ttf in Resources */,
+				7F6025902BE2F5DE00500560 /* athlete.js in Resources */,
 				DCD252692B7D7FB80045D5E2 /* Poppins-Italic.ttf in Resources */,
+				7F6025912BE2F5DE00500560 /* coach.js in Resources */,
 				DCD252642B7D7FB80045D5E2 /* Poppins-ExtraBold.ttf in Resources */,
+				7F6025962BE2F5DE00500560 /* db.js in Resources */,
+				7F60259B2BE2F5DE00500560 /* Requests.js in Resources */,
+				7F60258F2BE2F5DE00500560 /* affiliation.js in Resources */,
 				DCD2525E2B7D7FB80045D5E2 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				7F6025992BE2F5DE00500560 /* package-lock.json in Resources */,
+				7F6025952BE2F5DE00500560 /* workout.js in Resources */,
 				DCD252612B7D7FB80045D5E2 /* Poppins-LightItalic.ttf in Resources */,
 				DCD252632B7D7FB80045D5E2 /* Poppins-Medium.ttf in Resources */,
 				DCD252662B7D7FB80045D5E2 /* Poppins-ExtraLight.ttf in Resources */,

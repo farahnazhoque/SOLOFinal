@@ -37,7 +37,7 @@ app.post('/register', async (req, res) => {
         res.status(500).send('Server error ok registration');
     }
 });
-const PORT = 3000;
+const PORT = 3306;
 
 
 //listening function
