@@ -6,12 +6,20 @@ import AccountQuestion1 from './pages/CreateAccountQuestions/AccountQuestion1';
 import AccountQuestion2 from './pages/CreateAccountQuestions/AccountQuestion2';
 import AccountQuestion3 from './pages/CreateAccountQuestions/AccountQuestion3';
 import AccountQuestion4 from './pages/CreateAccountQuestions/AccountQuestion4';
-
+import AddAthleteView from '../src/pages/CoachView/AddAthleteView'
 import CoachHome from './pages/CoachView/CoachHome';
-import ProfileView from './pages/CoachView/ProfileView';
 import AAQuestion1 from './pages/AthleteAccount/AAQuestion1';
 import CAQuestion1 from './pages/CoachAccount/CAQuestion1';
-/* Core CSS required for Ionic components to work properly */
+import SECoach from './pages/Start Exploring/SECoach';
+import SEAthlete from './pages/Start Exploring/SEAthlete';
+import TabBar from './pages/CoachView/TabBar';
+import AthleteViewAccount from './pages/AthleteView/AthleteViewAccount';
+import AthleteViewMedia from './pages/AthleteView/AthleteViewMedia';
+import AthleteCurrentMedia from './pages/AthleteView/AthleteCurrentMedia';
+import AthletePastMedia from './pages/AthleteView/AthletePastMedia';
+import AthleteEditProfile from './pages/AthleteView/AthleteEditProfile';
+import AthleteProfile from './pages/AthleteView/AthleteProfile';
+import ProfileView from './pages/CoachView/ProfileView';
 
 import '@ionic/react/css/core.css';
 
@@ -41,6 +49,7 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import AddAthlete from './components/GradientHeader/AddAthlete';
 
 setupIonicReact();
 
@@ -66,14 +75,44 @@ const App: React.FC = () => (
         <Route exact path="/coach-account-question-1">
           <CAQuestion1 />
         </Route>
+        <Route exact path="/athlete-account-question-1">
+          <AAQuestion1 />
+        </Route>
+        <Route exact path="/start-exploring-coach">
+          <SECoach />
+        </Route>
+        <Route exact path="/start-exploring-athlete">
+          <SEAthlete />
+        </Route>
+        <Route exact path="/add-athlete-view">
+          <AddAthleteView />
+        </Route>
         <Route exact path="/coach-home">
           <CoachHome />
         </Route>
+        <Route exact path="/tab-bar">
+          <TabBar />
+        </Route>
+        <Route exact path="/athlete-view-account">
+          <AthleteViewAccount />
+        </Route>
+        <Route exact path="/athlete-view-media">
+          <AthleteViewMedia />
+        </Route>
+        <Route exact path="/athlete-current-media">
+          <AthleteCurrentMedia />
+        </Route>
+        <Route exact path="/athlete-past-media">
+          <AthletePastMedia />
+        </Route>
+        <Route exact path="/athlete-edit-profile">
+          <AthleteEditProfile />
+        </Route>
+        <Route exact path="/athlete-profile">
+          <AthleteProfile />
+        </Route>
         <Route exact path="/profile-view">
           <ProfileView />
-        </Route>
-        <Route exact path="/athlete-account-question-1">
-          <AAQuestion1 />
         </Route>
         <Route exact path="/">
           <Home />
