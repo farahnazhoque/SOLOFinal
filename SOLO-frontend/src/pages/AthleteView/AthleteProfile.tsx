@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../../components/CoachView/ProfileView.css';
+import TabBar2 from '../AthleteView/TabBar2';
 
 const ProfileView: React.FC = () => {
     const history = useHistory();
@@ -69,6 +70,7 @@ const ProfileView: React.FC = () => {
                     <i className="ri-pencil-line"></i> Edit Profile
                 </button>
             </div>
+            <TabBar2 />
         </div>
     );
 }

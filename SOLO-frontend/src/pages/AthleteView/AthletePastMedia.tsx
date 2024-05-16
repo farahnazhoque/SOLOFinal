@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { IonPage, IonContent } from '@ionic/react';
 import DynamicHeader from '../../components/AthleteView/DynamicHeader';  // Import the header component
 import MediaSection from '../../components/AthleteView/MediaSection';
+import TabBar2 from '../AthleteView/TabBar2';
 
 const AthletePastMedia: React.FC = () => {
     const history = useHistory(); // Use useHistory inside the component
@@ -29,17 +30,8 @@ const AthletePastMedia: React.FC = () => {
             <IonContent>
             <MediaSection title="" mediaItems={pastMedia} onViewMore={() => console.log('View more past media')} />
             </IonContent>
-            
-            <div className="navigation-buttons">
-                <button onClick={onBackClick} className="back-button">HOME</button> 
-                <button 
-                    onClick={onNextClick} 
-                    className="next-button"
-                    disabled={!name} // Disable button if name is empty; REPLACE WITH ICONS
-                    >
-                    PROFILE
-                </button>
-            </div>
+
+            <TabBar2 />
         </IonPage>
     );
   };

@@ -3,6 +3,7 @@ import { IonPage, IonContent } from '@ionic/react';
 import DynamicHeader from '../../components/AthleteView/DynamicHeader';  // Import the header component
 import MediaSection from '../../components/AthleteView/MediaSection';
 import { useHistory } from 'react-router-dom';
+import TabBar2 from '../AthleteView/TabBar2';
 
 interface AthleteViewProps {
     onNextClick: () => void; // Define only the method type here
@@ -45,16 +46,7 @@ const AthleteViewMedia: React.FC = (AthleteViewProps) => {
           <MediaSection title="Past Media" mediaItems={pastMedia} onViewMore={PastViewMoreClick} />
         </IonContent>
 
-          <div className="navigation-buttons">
-              <button onClick={onBackClick} className="back-button">HOME</button> 
-              <button 
-                  onClick={onNextClick} 
-                  className="next-button"
-                  disabled={!name} // Disable button if name is empty; REPLACE WITH ICONS
-                  >
-                  PROFILE
-              </button>
-          </div>
+          <TabBar2 />
       </IonPage>
     );
   };
