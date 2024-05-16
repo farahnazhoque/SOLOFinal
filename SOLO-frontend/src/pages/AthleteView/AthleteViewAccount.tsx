@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { IonContent, IonHeader, IonPage, IonCard, IonCardTitle, IonCardSubtitle } from '@ionic/react';
 import { athletes } from '../../data/athletes';
-import TabBar2 from '../AthleteView/TabBar2';
+import TabBar2 from '../AthleteView/TabBar2'
 
 const AthleteHome: React.FC = () => {
   const history = useHistory(); // Use useHistory inside the component
