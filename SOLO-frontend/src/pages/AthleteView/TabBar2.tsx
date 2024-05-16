@@ -11,7 +11,7 @@ const TabBar2: React.FC = () => {
         <IonLabel className="tab-label"></IonLabel>
       </IonTabButton>
 
-      <IonTabButton tab="athleteeditprofile" href="/athlete-edit-profile">
+      <IonTabButton tab="athleteeditprofile" href="/athlete-profile">
         <IonIcon icon={person} className="tab-icon" />
         <IonLabel className="tab-label"></IonLabel>
       </IonTabButton>
