@@ -300,16 +300,21 @@ ion-modal {
 }
 
 .add-media-button {
+  color: white;
   position: fixed;        /* Keeps the button fixed within the viewport */
   bottom: 62px;           /* Distance from the bottom of the viewport */
   right: 10px;            /* Distance from the right of the viewport */
   z-index: 999;           /* Ensures the button is above most other content */
   
   --border-radius: 12px;  /* Smaller radius for slightly rounded corners */
-  width: 120px;           /* Increased width for a rectangle shape */
+  width: 140px;           /* Increased width for a rectangle shape */
   height: 50px;           /* Height of the button */
   
-  --background: #3880ff;  /* Background color of the button */
+  --background: linear-gradient(to right, 
+      #3499CD 0%, 
+      #3485CD 29%, 
+      #354DCD 59%, 
+      #26256C 100%);  
   font-size: 16px;        /* Font size for the text inside the button */
   display: flex;          /* Enables flexbox layout */
   align-items: center;    /* Centers content vertically */

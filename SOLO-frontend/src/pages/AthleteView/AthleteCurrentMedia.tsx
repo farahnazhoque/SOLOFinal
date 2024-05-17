@@ -55,7 +55,7 @@ const AthleteCurrentMedia: React.FC = () => {
       <DynamicHeader title="Your Media" />
       <IonContent>
         <MediaSection title="" mediaItems={currentMedia} onViewMore={() => console.log('View more current media')} />
-        <IonButton className="add-media-button" onClick={() => setShowModal(true)}>Add Media</IonButton>
+        <IonButton className="add-media-button" onClick={() => setShowModal(true)}>+ Add Media</IonButton>
         <IonModal isOpen={showModal} onDidDismiss={() => setShowModal(false)}>
             <div className="white-modal" style={{ padding: '20px' }}> 
             <h1 className="modal-title">Media Preference</h1>
