@@ -55,20 +55,27 @@ const AthleteCurrentMedia: React.FC = () => {
       <DynamicHeader title="Your Media" />
       <IonContent>
         <MediaSection title="" mediaItems={currentMedia} onViewMore={() => console.log('View more current media')} />
-        <IonButton onClick={() => setShowModal(true)}>Add Media</IonButton>
+        <IonButton className="add-media-button" onClick={() => setShowModal(true)}>Add Media</IonButton>
         <IonModal isOpen={showModal} onDidDismiss={() => setShowModal(false)}>
-          <div style={{ padding: '20px' }}>
-            <IonButton expand="block" onClick={() => document.getElementById('file-upload')?.click()}>Upload from Files</IonButton>
-            <IonButton expand="block" onClick={takePhoto}>Take a Video/Photo</IonButton>
-            <IonButton color="medium" expand="block" onClick={() => setShowModal(false)}>Cancel</IonButton>
-          </div>
-          <input
-            id="file-upload"
-            type="file"
-            accept="image/*,video/*"
-            style={{ display: 'none' }}
-            onChange={handleFileChange}
-          />
+            <div className="white-modal" style={{ padding: '20px' }}> 
+            <h1 className="modal-title">Media Preference</h1>
+              <IonButton expand="block" className="my-custom-button" onClick={() => document.getElementById('file-upload')?.click()}>
+                Upload from Files
+              </IonButton>
+              <IonButton expand="block" className="my-custom-button" onClick={takePhoto}>
+                Take a Video/Photo
+              </IonButton>
+              <IonButton expand="block" className="cancel-button" onClick={() => setShowModal(false)}>
+                Cancel
+              </IonButton>
+            </div>
+            <input
+              id="file-upload"
+              type="file"
+              accept="image/*,video/*"
+              style={{ display: 'none' }}
+              onChange={handleFileChange}
+            />
         </IonModal>
       </IonContent>
       <TabBar2 />
