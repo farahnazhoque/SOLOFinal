@@ -38,4 +38,37 @@ export class ApiService {
         throw error;
       });
   }
+  
+
+  static async createAthlete(athleteData: any) {
+    let sentData = {
+      "name": athleteData.name,
+      "email": athleteData.email,
+      "phone_number": athleteData.phoneNumber,
+      "password": athleteData.password,
+      "profile_pic": "fdsa",
+      "age": parseInt(athleteData.age, 10),
+      "gender": athleteData.gender,
+      "height": athleteData.height,
+      "weight": parseInt(athleteData.weight, 10),
+      "affiliation_id": parseInt(athleteData.affiliationId, 10)
+    }
+    return axios.post(`${BASE_URL}/athlete/sign-up-athlete`, sentData)
+      .then(response => response.data)
+      .catch(error => {
+        throw error;
+      });
+}
+
+
+static async getAffiliations() {
+  try {
+      const response = await axios.get(`${BASE_URL}/affiliation`);
+      return response.data;
+  } catch (error) {
+      console.error('Failed to fetch affiliations:', error);
+      throw error;
   }
+}
+}
+
