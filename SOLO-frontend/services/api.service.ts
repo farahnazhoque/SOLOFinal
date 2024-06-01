@@ -2,7 +2,7 @@ import axios from 'axios';
 //import { AnswersProvider } from '../src/contexts/CreateAccountAnswersContext';
 
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'http://localhost:3001';
 
 export class ApiService {
 
