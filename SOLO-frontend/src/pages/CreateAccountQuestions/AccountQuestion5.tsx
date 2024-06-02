@@ -39,13 +39,15 @@ const AccountQuestion5: React.FC<AccountQuestion5Props> = ({}) => {
 
   const onNextClick = async () => {
     console.log('isValidImage:', isValidImage);
-    console.log('profilePhoto:', profilePhoto);
+    console.log('profilePhoto:', localProfilePhoto);
 
-    if (isValidImage && profilePhoto) {
+    if (isValidImage && localProfilePhoto) {
       console.log('Profile photo before setting account:', profilePhoto);
 
       const formData = new FormData();
-      formData.append('file', profilePhoto);
+      formData.append('file', localProfilePhoto
+        
+      );
 
       try {
         console.log('Frontend POST: attempting post');
