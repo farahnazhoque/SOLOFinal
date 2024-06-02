@@ -1,4 +1,3 @@
-// connect to AWS RDS, S3
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2/promise');
@@ -8,6 +7,9 @@ const path = require('path');
 const fs = require('fs');
 const cors = require('cors'); // Import the cors middleware
 const { uploadMedia } = require('../services/awsS3_upload'); 
+const { S3Client, GetObjectCommand } = require('@aws-sdk/client-s3');
+const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
+const { fromEnv } = require('@aws-sdk/credential-provider-env');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -15,6 +17,20 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 
 app.use(bodyParser.json());
+
+// Configure AWS SDK
+const s3 = new S3Client({
+    region: process.env.AWS_REGION,
+    credentials: fromEnv()
+});
+
+// const pool = mysql.createPool({
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     port: process.env.DB_PORT,
+//     password: process.env.DB_PASSWORD,
+//     database: process.env.DB_NAME
+// });
 
 const pool = mysql.createPool({
     host: "solotestdb.cxqsaw0a4eyq.us-west-1.rds.amazonaws.com",
@@ -30,7 +46,7 @@ if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir);
 }
 
-const upload = multer({ dest: uploadsDir  });
+const upload = multer({ dest: uploadsDir });
 
 // Test endpoint
 app.get('/test', (req, res) => {
@@ -66,13 +82,32 @@ app.post('/upload', (req, res, next) => {
         const mediaUrl = await uploadMedia(bucketName, mediaPath, mediaName);
   
         fs.unlinkSync(mediaPath);
-  
+        
         res.send({ mediaUrl });
       } catch (error) {
         console.error('Error uploading file:', error);
         res.status(500).send('Error uploading file.');
       }
   });
+
+// Get file URL from S3
+app.get('/file-url', async (req, res) => {
+    const { key } = req.query; // Expecting the file key as a query parameter
+
+    const params = {
+        Bucket: 'solo-media-bucket-test', // replace with your bucket name
+        Key: key // Name of file uploaded. For example: mario.png
+    };
+
+    try {
+        const command = new GetObjectCommand(params);
+        const url = await getSignedUrl(s3, command, { expiresIn: 60 * 60 }); // URL expires in 1 hour
+        res.send({ url });
+    } catch (error) {
+        console.error('GET Error generating signed URL from S3:', error);
+        res.status(500).send('GET Error generating signed URL from S3.');
+    }
+});
 
 app.post('/api/users', upload.single('profilePhoto'), async (req, res) => {
     const { name, email, password, role } = req.body;
