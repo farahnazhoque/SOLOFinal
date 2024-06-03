@@ -84,7 +84,7 @@ app.post('/upload', (req, res, next) => {
   
         fs.unlinkSync(mediaPath);
         
-        res.send({ mediaUrl });
+        res.send({ mediaUrl, fileName: mediaName });
       } catch (error) {
         console.error('Error uploading file:', error);
         res.status(500).send('Error uploading file.');

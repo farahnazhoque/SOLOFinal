@@ -57,15 +57,28 @@ const AccountQuestion5: React.FC<AccountQuestion5Props> = ({}) => {
         });
 
         if (response.ok) {
-          console.log('Frontend POST: Image uploaded successfully');
+          const jsonResponse = await response.json();
+          const { fileName } = jsonResponse;
+          console.log('Frontend POST: Image uploaded successfully, fileName:', fileName);
+
+          history.push('/account-question-6', {
+              state: {
+                  name: name,
+                  email: email,
+                  phoneNumber: phoneNumber,
+                  password: password,
+                  profilePhoto: fileName // Use fileName instead of localProfilePhoto
+              }
+          });
+
         } else {
-          console.error('Frontend POST: Image upload failed');
+          console.error('Frontend POST response not ok: Image upload failed');
         }
       } catch (error) {
         console.error('Frontend POST catch: Error uploading image:', error);
       }
 
-      history.push('/account-question-6', { state: { name: name, email: email, phoneNumber: phoneNumber, password: password, profilePhoto: profilePhoto } });
+      //history.push('/account-question-6', { state: { name: name, email: email, phoneNumber: phoneNumber, password: password, profilePhoto: localProfilePhoto } });
     } else {
       alert('Please ensure your image is the correct type.');
     }
